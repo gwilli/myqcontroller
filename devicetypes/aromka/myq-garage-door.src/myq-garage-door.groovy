@@ -28,15 +28,15 @@ metadata {
 	tiles(scale: 2) {
 		standardTile("door", "device.door", width: 2, height: 2) {
             state "open", label: '${name}', icon: "st.doors.garage.garage-open", backgroundColor: "#ffa81e", canChangeIcon: true, canChangeBackground: true
-            state "closed", label: '${name}', icon: "st.doors.garage.garage-closed", backgroundColor: "#79b821", canChangeIcon: true, canChangeBackground: true
+            state "closed", label: '${name}', icon: "st.doors.garage.garage-closed", backgroundColor: "#00a0dc", canChangeIcon: true, canChangeBackground: true
         }
 
 		multiAttributeTile(name:"details", type:"generic", width:6, height:4) {
 			tileAttribute("device.door", key: "PRIMARY_CONTROL") {
       			attributeState "open", label: '${name}', icon:"st.doors.garage.garage-open", backgroundColor:"#ffa81e", action: "close", nextState:"closing"
       			attributeState "closing", label: '${name}', icon:"st.doors.garage.garage-open", backgroundColor:"#ffa81e", action: "open", nextState:"closed"
-      			attributeState "closed", label:'${name}', icon:"st.doors.garage.garage-closed", backgroundColor:"#79b821", action: "open", nextState:"opening"
-      			attributeState "opening", label:'${name}', icon:"st.doors.garage.garage-closed", backgroundColor:"#79b821", action: "close", nextState:"open"
+      			attributeState "closed", label:'${name}', icon:"st.doors.garage.garage-closed", backgroundColor:"#00a0dc", action: "open", nextState:"opening"
+      			attributeState "opening", label:'${name}', icon:"st.doors.garage.garage-closed", backgroundColor:"#00a0dc", action: "close", nextState:"open"
     		}
 		}
 
