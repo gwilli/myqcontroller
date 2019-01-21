@@ -131,12 +131,13 @@ var exports = module.exports = new function () {
 
                 // cycle through each device
                 for (var d in data.Devices) {
+                   //console.log(getTimestamp() + data.Devices[d].MyQDeviceTypeName);
 
                     var dev = data.Devices[d],
                         device = {
                             'id': dev.MyQDeviceId,
                             'name': dev.MyQDeviceTypeName.replace(' Opener', ''),
-                            'type': dev.MyQDeviceTypeName.replace('VGDO', 'GarageDoorOpener'),
+                            'type': dev.MyQDeviceTypeName.replace('Garage Door Opener WGDO', 'GarageDoorOpener'),
                             'serial': dev.SerialNumber
                         };
 
